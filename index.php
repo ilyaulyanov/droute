@@ -4,7 +4,7 @@ require_once('model/index.php');
 $dr = new droute();
 
 $picks = $dr->get_all_staff_picks();
-print_r($picks);
+//print_r($picks);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@ print_r($picks);
         <br><br>
         <h1 class="header center teal-text text-lighten-2">Company Objective</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Drone route and media storage in the cloud.</h5>
+          <h5 class="header col s12 light">Drone route and media storage in the cloud</h5>
         </div>
         <div class="row center">
           <p class="row center"></p>
@@ -50,7 +50,7 @@ print_r($picks);
 
       </div>
     </div>
-    <div class="parallax"><img src="img/dji_phantom.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="img/airline.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
 
@@ -64,7 +64,7 @@ print_r($picks);
             <h2 class="center brown-text"><i class="mdi-image-flash-on"></i></h2>
             <h5 class="center">Geotagging & Route Storage</h5>
 
-            <p class="light">Securely store route waypoints and find routes relative to your location that have been uploaded by the Droute community. Easily access your previously flown routes for repeat projects and aerial surveying.</p>
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
           </div>
         </div>
 
@@ -73,7 +73,7 @@ print_r($picks);
             <h2 class="center brown-text"><i class="mdi-social-group"></i></h2>
             <h5 class="center">Private & Public Profiles</h5>
 
-            <p class="light"> Public profiles are completely free to use and always will be. Upgrade to an enterpise account to securely store routes and content privately; along with unlimited storage in the cloud.</p>
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
           </div>
         </div>
 
@@ -82,34 +82,8 @@ print_r($picks);
             <h2 class="center brown-text"><i class="mdi-action-settings"></i></h2>
             <h5 class="center">Route Media Timeline</h5>
 
-            <p class="light">The route media timeline allows users to timestamp there uploads and share drone generated content such as a photo gallery and video with their followers.</p>
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
           </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">Secure your drone routes and content in the cloud.</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/airline.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Compatable Drones</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
         </div>
       </div>
 
@@ -125,7 +99,48 @@ print_r($picks);
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="img/parrot.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Compatable Drones</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <h4 class="header center text-lighten-2">Staff Picks</h4>
+            <div class="row">
+                <?php
+                  foreach ($picks as $card) {
+                    echo "<div class=\"col s12 m6\"> <div class=\"card small\"><div class=\"card-image\">";
+                    echo "<img src=\"".$card['thumb']."\">";
+                    echo "<span class=\"card-title\">".$card['route_name']."</span>";
+                    echo "</div> <div class=\"card-content\">";
+                    echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['add_date']."</p>";
+                    echo "</div><div class=\"card-action\">";
+                    echo "<a href=\"#\">Explore the route</a>";
+                    echo "</div></div></div>";
+                  }
+                ?>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
   <footer class="page-footer teal">
@@ -138,21 +153,21 @@ print_r($picks);
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Careers</h5>
+          <h5 class="white-text">Settings</h5>
           <ul>
-            <li><a class="white-text" href="#!">iOS Developer</a></li>
-            <li><a class="white-text" href="#!">Android Developer</a></li>
-            <li><a class="white-text" href="#!">Marketing Intern</a></li>
-            
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Gordon Lee</a></li>
-            <li><a class="white-text" href="#!">Ilya Ulyanov</a></li>
-            <li><a class="white-text" href="#!">Jeff FitzGerald</a></li>
-            
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
       </div>

@@ -3,7 +3,7 @@
 require("connect.php");
 
 class droute{
-	function get_all_routes(){
+	function get_all_staff_picks(){
 		global $con;
 		$query = "SELECT * FROM routes LEFT JOIN routes_staffpicks ON routes_staffpicks.routes_id = routes.id 
 										LEFT JOIN categories ON categories.id = routes.category ";

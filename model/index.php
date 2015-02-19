@@ -17,6 +17,7 @@ class droute{
 				$arr['route_name']= $row['route_name'];
 				$arr['category_name']=  $row['category_name'];
 				$arr['add_date']=  $row['add_date'];
+				$arr['thumb'] = $row['thumb'];
 				$arr2 []= $arr;
 			}
 			//print_r($arr2);
@@ -30,7 +31,7 @@ class droute{
 
 //$db = new droute();
 
-//$db -> get_all_routes();
+//print_r($db -> get_all_staff_picks());
 
 
 ?>

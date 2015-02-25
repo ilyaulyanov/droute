@@ -20,11 +20,12 @@ $picks = $dr->get_all_staff_picks();
 <body>
   <nav class="white" role="navigation">
     <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Droute</a>
+      <div class="nav-wrapper"><a id="logo-container" href="http://google.ca" class="brand-logo">Droute</a>
         <ul class="right">
          <li><a href="#">Home</a></li> 
-         <li><a href="#">Features</a></li>
-         <li><a href="#">Explore</a></li>
+         <li><a href="features.php">Features</a></li>
+         <li><a href="explore.php">Explore</a></li>
+         <li><a href="contact.php">Contact</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">

@@ -4,7 +4,18 @@ require_once('model/index.php');
 $dr = new droute();
 
 $picks = $dr->get_all_staff_picks();
+
 //print_r($picks);
+
+session_start();
+if(!isset($_SESSION['country'])){
+  $ip = $_SERVER['REMOTE_ADDR'];
+  $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+  $_SESSION['country'] = $details->country;
+}
+
+print_r($_SESSION);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

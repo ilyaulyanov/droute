@@ -33,23 +33,25 @@
   </nav>
 
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
+  <div class="row explore banner">
+    <div class="col s12 m12">
       <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Explore</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">The Rebel Force</h5>
-        </div>
-        <div class="row center">
-          <p class="row center"></p>
-        </div>
-        <br><br>
-
+          <div class="row">
+            <div class="col m12 s12 center white-text ">
+              <h1>We are a cloud, big data and productivity company</h1>
+              <h5 class="margin-top-20">Get enterprise level service for any budget size.</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col m12 s12 center white-text">
+              <a href="/cloud" class="btn-large orange cloud_get_started waves-effect waves-light">Migrate your business to the cloud today and stay connected</a>
+            </div>
+          </div>
+       
       </div>
     </div>
-    <div class="parallax"><img src="img/dji_phantom.jpg" alt="Unsplashed background img 2"></div>
   </div>
+
   <div class="container">
     <div class="row center">
       <div class="col s12 l4 ">

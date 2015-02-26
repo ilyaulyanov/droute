@@ -55,7 +55,7 @@ $picks = $dr->get_all_staff_picks();
   </div>
 
 
-  <div class="container">
+  <div class="container"> 
     <div class="section">
 
       <!--   Icon Section   -->

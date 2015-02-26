@@ -7,6 +7,8 @@ $picks = $dr->get_all_staff_picks();
 
 //print_r($picks);
 
+
+//get location of a user and store it in a session
 session_start();
 if(!isset($_SESSION['country'])){
   $ip = $_SERVER['REMOTE_ADDR'];
@@ -14,7 +16,6 @@ if(!isset($_SESSION['country'])){
   $_SESSION['country'] = $details->country;
 }
 
-print_r($_SESSION);
 
 ?>
 <!DOCTYPE html>

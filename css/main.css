@@ -1,0 +1,9 @@
+.intoExplore{
+background: url('http://www.clker.com/cliparts/J/j/A/F/7/O/world-map.svg') no-repeat center center;
+background-size: cover;
+}
+
+.intoExplore h1{
+	color:black;
+	padding-bottom: 4em;
+}

@@ -5,7 +5,7 @@ $dr = new droute();
 
 $picks = $dr->get_all_staff_picks();
 
-//print_r($picks);
+print_r($picks);
 
 
 //get location of a user and store it in a session
@@ -133,7 +133,7 @@ if(!isset($_SESSION['country'])){
                     echo "</div> <div class=\"card-content\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['add_date']."</p>";
                     echo "</div><div class=\"card-action\">";
-                    echo "<a href=\"#\">Explore the route</a>";
+                    echo "<a href=\"route.php?route=".$card['id']."\">Explore the route</a>";
                     echo "</div></div></div>";
                   }
                 ?>

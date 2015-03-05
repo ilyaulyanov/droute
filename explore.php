@@ -10,6 +10,7 @@
   <title>Droute</title>
 
   <!-- CSS  -->
+  <link href="css/main.css" type="text/css" rel="stylesheet" />
   <link href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="bower_components/materialize/dist/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
@@ -33,21 +34,14 @@
   </nav>
 
 
-  <div class="row explore banner">
+  <div class="row intoExplore">
     <div class="col s12 m12">
       <div class="container">
           <div class="row">
             <div class="col m12 s12 center white-text ">
-              <h1>We are a cloud, big data and productivity company</h1>
-              <h5 class="margin-top-20">Get enterprise level service for any budget size.</h5>
+              <h1>Explore Routes</h1>
             </div>
           </div>
-          <div class="row">
-            <div class="col m12 s12 center white-text">
-              <a href="/cloud" class="btn-large orange cloud_get_started waves-effect waves-light">Migrate your business to the cloud today and stay connected</a>
-            </div>
-          </div>
-       
       </div>
     </div>
   </div>

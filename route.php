@@ -48,7 +48,7 @@
 </div>
   
 
-  <div class="row">
+  <div class="row route-cont no-margin">
     <div class="col l2 ">
       <div class="row">
         <p><strong>Route information</strong></p>
@@ -73,11 +73,11 @@
           
       </div>
     <div class="col l6">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20821.349314510637!2d-123.11645662524415!3d49.28267527248596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1426276883227" width="100%" height="600px" frameborder="0" style="border:0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20821.349314510637!2d-123.11645662524415!3d49.28267527248596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1426276883227" width="100%" height="100vh" frameborder="0" style="border:0"></iframe>
     </div>
     <div class="col l4">
       <h5>Route Media</h5>
-       <div class="row js-masonry"  data-masonry-options='{ "isFitWidth": true }'>
+       <div class="js-masonry"  data-masonry-options='{ "isFitWidth": true }'>
         <div class="media-item"></div>
         <div class="media-item w2 h2"></div>
         <div class="media-item h2"></div>

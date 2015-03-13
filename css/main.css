@@ -1,3 +1,19 @@
+
+/* 
+	////////////////////////
+	SMACCS!
+	////////////////////////
+*/
+
+
+/*
+	BASE
+*/
+h1,h2,h3,h4,h5,h6{
+	font-family:'Roboto Slab', 'Roboto', sans-serif;
+}
+html{color:#fff;}
+
 .intoExplore{
 background: url('http://www.clker.com/cliparts/J/j/A/F/7/O/world-map.svg') no-repeat center center;
 background-size: cover;
@@ -7,3 +23,53 @@ background-size: cover;
 	color:black;
 	padding-bottom: 4em;
 }
+
+.route-btn{margin-top:1em;width:100%;}
+.no-margin{margin:0!important;}
+.responsive-image{width:200px;}
+
+/* 
+
+	THEME
+
+*/
+
+.dark-primary-bg{
+	background:#0288D1;
+}
+.primary-bg{
+	background:#03A9F4;
+}
+.light-primary-bg{
+	background:#B3E5FC;
+}
+.accent-bg{
+	background:#8BC34A;
+}
+.white-text{
+	color:#FFFFFF;
+}
+.primary-text{
+	color:#212121;
+}
+.divider{
+	color:#B6B6B6;
+}
+
+
+
+.row .media-item {
+	overflow: hidden;
+  width:  120px;
+  height: 100px;
+  float: left;
+  background:url('../img/placeholder.png')no-repeat center center / cover;
+}
+
+.media-item.w2 { width:  240px; }
+.media-item.w3 { width:  360px; }
+.media-item.w4 { width:  480px; }
+
+.media-item.h2 { height: 200px; }
+.media-item.h3 { height: 300px; }
+.media-item.h4 { height: 400px; }

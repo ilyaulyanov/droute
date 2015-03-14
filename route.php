@@ -33,7 +33,7 @@
     </div>
   </nav>
   <!--route name, user avatar and name -->
-<div class="primary-bg row no-margin">
+<div class="primary-bg row no-margin z-depth-1">
 <div class="container">
     <div class="row">
       <div class="col l6 route-name left-align white-text">
@@ -49,10 +49,10 @@
   
 
   <div class="row route-cont no-margin">
-    <div class="col l2 ">
+    <div class="col l2 m3 s12">
       <div class="row">
-        <p><strong>Route information</strong></p>
-          <table class="striped hoverable">
+        <p><strong>Route information <i class="primary-bg-text tiny mdi-action-help tooltipped" data-position="bottom" data-delay="50" data-tooltip="This is general route information"></i></strong></p>
+          <table class="bordered hoverable">
             <tbody>
               <tr>
                 <td>Name</td>
@@ -68,15 +68,16 @@
               </tr>
             </tbody>
         </table>
-        <a class="waves-effect waves-light btn route-btn"><i class="mdi-file-cloud left"></i>Save to my cloud</a>
+        <a class="waves-effect waves-light btn route-btn dark-primary-bg"><i class="mdi-file-cloud left"></i>Save this route</a>
       </div>
           
       </div>
-    <div class="col l6">
+    <div class="col l6 m9 s12">
+      <p><strong>Flight map <i class="primary-bg-text tiny mdi-action-help tooltipped" data-position="bottom" data-delay="50" data-tooltip="Generated fligh path for a route"></i></strong></p>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20821.349314510637!2d-123.11645662524415!3d49.28267527248596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1426276883227" width="100%" height="100vh" frameborder="0" style="border:0"></iframe>
     </div>
-    <div class="col l4">
-        <p><strong>Route media</strong></p>
+    <div class="col l4 m12 s12">
+        <p><strong>Route media <i class="primary-bg-text tiny mdi-action-help tooltipped" data-position="bottom" data-delay="50" data-tooltip="Media taken during the flight"></i></strong></p>
        <div class="js-masonry"  data-masonry-options='{ "isFitWidth": true }'>
         <div class="media-item"></div>
         <div class="media-item w2 h2"></div>
@@ -90,13 +91,19 @@
         <div class="media-item"></div>
         <div class="media-item h2"></div>
         <div class="media-item"></div>
-        <div class="media-item w2 h2"></div>
+        <div class="media-item w2"></div>
       </div>
       
     </div>
               
   </div>
-  
+  <h3>Route timeline</h3>
+  <div class="container">
+    
+    <div class="row">
+      
+    </div>
+  </div>
 
 
 

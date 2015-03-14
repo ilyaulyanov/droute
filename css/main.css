@@ -27,8 +27,8 @@ background-size: cover;
 .route-btn{margin-top:1em;width:100%;}
 .no-margin{margin:0!important;}
 .responsive-image{width:200px;}
-.route-cont{height:80vh;overflow: hidden;margin-bottom:0;}
-.route-cont iframe{height:100vh;}
+.route-cont{margin-bottom:0;}
+.route-cont iframe{height:81vh;}
 /* 
 
 	THEME
@@ -52,6 +52,9 @@ background-size: cover;
 }
 .primary-text{
 	color:#212121;
+}
+.primary-bg-text{
+	color:#03A9F4;
 }
 .divider{
 	color:#B6B6B6;

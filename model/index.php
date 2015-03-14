@@ -26,10 +26,10 @@ class droute{
 		}
 	}
 
-	function get_route_media(){
+	function get_route_media($id){
 		global $con;
 		$query = "SELECT * FROM route_media LEFT JOIN routes ON route_media.rid = routes.id 
-										LEFT JOIN categories ON categories.id = routes.category ";
+										LEFT JOIN categories ON categories.id = routes.category WHERE routes.id =".$id;
 		$result = mysqli_query($con, $query);
 		if($result){
 			$arr = array();
@@ -54,7 +54,7 @@ class droute{
 
 $db = new droute();
 
-$db -> get_route_media();
+$db -> get_route_media(11);
 
 
 ?>

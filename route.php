@@ -1,5 +1,12 @@
 <?php
-//print_r($_GET);
+print_r($_GET);
+
+require_once('model/index.php');
+$dr = new droute();
+
+$images = $dr->get_route_media_img($_GET['route']);
+$info = $dr->get_route_media($_GET['route']);
+print_r($images);
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +42,18 @@
   <!--route name, user avatar and name -->
 <div class="primary-bg row no-margin z-depth-1">
 <div class="container">
-    <div class="row">
-      <div class="col l6 route-name left-align white-text">
+    <div class="row no-margin">
+      <div class="col l8 route-name left-align white-text">
         <h4><?php echo $_GET['name']; ?></h4>
       </div>
-      <div class="col l6 route-created-by right-align valign-wrapper white-text">
-        <p class="valign">Route created by </p>
-        <p> Kevin </p>
+      <div class="col l2 route-created-by center-align white-text">
+        <p class="">Route created by: </p> 
+      </div>
+      <div class="col l2 route-created-by left-align white-text">
+        <p class="route-creator valign-wrapper"> 
+          <img src="http://materializecss.com/images/yuna.jpg" alt="" class="valign circle responsive-img"> 
+          <span class="valign">Kevin Pilsner</span>
+        </p>
       </div>
   </div>
 </div>
@@ -56,18 +68,20 @@
             <tbody>
               <tr>
                 <td>Name</td>
-                <td><?php echo $_GET['name']; ?></td>
+                <td><?php echo $info['route_name']; ?></td>
               </tr>
               <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
+                <td>Category</td>
+                <td><?php echo $info['category_name']; ?></td>
               </tr>
               <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
+                <td>Date</td>
+                <td><?php echo $info['date']; ?></td>
               </tr>
             </tbody>
         </table>
+        <p><strong>Description</strong></p>
+        <p><?php echo $info['text_info'] ?></p>
         <a class="waves-effect waves-light btn route-btn dark-primary-bg"><i class="mdi-file-cloud left"></i>Save this route</a>
       </div>
           
@@ -79,7 +93,15 @@
     <div class="col l4 m12 s12">
         <p><strong>Route media <i class="primary-bg-text tiny mdi-action-help tooltipped" data-position="bottom" data-delay="50" data-tooltip="Media taken during the flight"></i></strong></p>
        <div class="js-masonry"  data-masonry-options='{ "isFitWidth": true }'>
-        <div class="media-item"></div>
+        <?php 
+          foreach ($images as $val) {
+            # code...
+            echo "<div class='media-item w3 h2' style='background:url(\"".$val."\")no-repeat center center / cover'></div>";
+          }
+         
+
+        ?>
+        <!--<div class="media-item"></div>
         <div class="media-item w2 h2"></div>
         <div class="media-item h2"></div>
         <div class="media-item h2"></div>
@@ -91,7 +113,7 @@
         <div class="media-item"></div>
         <div class="media-item h2"></div>
         <div class="media-item"></div>
-        <div class="media-item w2"></div>
+        <div class="media-item w2"></div>-->
       </div>
       
     </div>
@@ -99,7 +121,7 @@
   </div>
   <h3>Route timeline</h3>
   <div class="container">
-    
+
     <div class="row">
       
     </div>

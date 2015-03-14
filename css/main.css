@@ -24,11 +24,20 @@ background-size: cover;
 	padding-bottom: 4em;
 }
 
+/*
+
+	MODULES
+
+*/
+
 .route-btn{margin-top:1em;width:100%;}
 .no-margin{margin:0!important;}
 .responsive-image{width:200px;}
 .route-cont{margin-bottom:0;}
 .route-cont iframe{height:81vh;}
+.route-creator span{margin-left:0.5em;}
+.route-creator img{width:2.5rem;}
+
 /* 
 
 	THEME
@@ -67,7 +76,7 @@ background-size: cover;
   width:  120px;
   height: 100px;
   float: left;
-  background:url('../img/placeholder.png')no-repeat center center / cover;
+  background:url('../img/placeholder.png')no-repeat bottom center / cover;
 }
 
 .media-item.w2 { width:  240px; }

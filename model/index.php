@@ -5,7 +5,7 @@ require("connect.php");
 class droute{
 	function get_all_staff_picks(){
 		global $con;
-		$query = "SELECT * FROM routes LEFT JOIN routes_staffpicks ON routes_staffpicks.routes_id = routes.id 
+		$query = "SELECT * FROM routes_staffpicks LEFT JOIN routes ON routes_staffpicks.routes_id = routes.id 
 										LEFT JOIN categories ON categories.id = routes.category ";
 		$result = mysqli_query($con, $query);
 		//print_r($result);
@@ -34,7 +34,6 @@ class droute{
 		$result = mysqli_query($con, $query);
 		if($result){
 			$arr = array();
-			$arr2 = array();
 			while($row = mysqli_fetch_array($result)){
 				$arr['id']= $row['rid'];
 				$arr['route_name']= $row['route_name'];
@@ -42,10 +41,9 @@ class droute{
 				$arr['date']=  $row['date_of_creation'];
 				$arr['thumb'] = $row['thumb'];
 				$arr['text_info'] = $row['info'];
-				$arr2 []= $arr;
+				
 			}
-			print_r($arr2);
-			return $arr2;
+			return $arr;
 			
 		}
 	} 
@@ -57,8 +55,7 @@ class droute{
 		if($result){
 			$arr = array();
 			while($row = mysqli_fetch_array($result)){
-				$arr['id']= $row['route_img_rid'];
-				$arr['img_links'][]= $row['img_link'];
+				$arr[]= $row['img_link'];
 				
 			}
 			return $arr;
@@ -68,12 +65,12 @@ class droute{
 }
 
 
-$db = new droute();
+//$db = new droute();
 
 
 
-$f="15";
-print_r($db -> get_route_media_img($f));
+//$f="15";
+//print_r($db -> get_route_media_img($f));
 
 
 

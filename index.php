@@ -5,7 +5,7 @@ $dr = new droute();
 
 $picks = $dr->get_all_staff_picks();
 
-//print_r($picks);
+print_r($picks);
 
 
 //get location of a user and store it in a session

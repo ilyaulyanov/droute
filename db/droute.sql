@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Mar 14, 2015 at 01:57 AM
+-- Generation Time: Mar 14, 2015 at 02:30 AM
 -- Server version: 5.6.17-debug-log
 -- PHP Version: 5.5.12
 
@@ -95,6 +95,27 @@ INSERT INTO `routes_staffpicks` (`routes_id`, `add_date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `route_imgs`
+--
+
+DROP TABLE IF EXISTS `route_imgs`;
+CREATE TABLE IF NOT EXISTS `route_imgs` (
+  `route_img_rid` int(11) NOT NULL,
+  `img_link` varchar(300) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `route_imgs`
+--
+
+INSERT INTO `route_imgs` (`route_img_rid`, `img_link`) VALUES
+(15, 'http://www.websitesvancouver.com/wp-content/uploads/2010/11/vancouver.jpg'),
+(15, 'http://www.unityofvancouver.org/wp-content/uploads/2012/05/vancouver_skyline-wallpaper-1920x10802.jpg'),
+(15, 'http://www.shangri-la.com/uploadedImages/Shangri-la_Hotels/Shangri-La_Hotel,_Vancouver/SLV-Bg-Shangri-La-Hotel-Vancouver-v4.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `route_media`
 --
 
@@ -137,6 +158,12 @@ ALTER TABLE `routes_staffpicks`
  ADD UNIQUE KEY `routes_id` (`routes_id`);
 
 --
+-- Indexes for table `route_imgs`
+--
+ALTER TABLE `route_imgs`
+ ADD KEY `route_img_rid` (`route_img_rid`);
+
+--
 -- Indexes for table `route_media`
 --
 ALTER TABLE `route_media`
@@ -171,6 +198,12 @@ ADD CONSTRAINT `routes_ibfk_2` FOREIGN KEY (`category`) REFERENCES `categories` 
 --
 ALTER TABLE `routes_staffpicks`
 ADD CONSTRAINT `routes_staffpicks_ibfk_1` FOREIGN KEY (`routes_id`) REFERENCES `routes` (`id`);
+
+--
+-- Constraints for table `route_imgs`
+--
+ALTER TABLE `route_imgs`
+ADD CONSTRAINT `route_imgs_ibfk_1` FOREIGN KEY (`route_img_rid`) REFERENCES `routes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `route_media`

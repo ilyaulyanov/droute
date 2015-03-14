@@ -26,10 +26,11 @@ class droute{
 		}
 	}
 
-	function get_route_media($id){
+	function get_route_media($rid){
 		global $con;
 		$query = "SELECT * FROM route_media LEFT JOIN routes ON route_media.rid = routes.id 
-										LEFT JOIN categories ON categories.id = routes.category WHERE routes.id =".$id;
+										LEFT JOIN categories ON categories.id = routes.category 
+										WHERE route_media.rid= ".$rid;
 		$result = mysqli_query($con, $query);
 		if($result){
 			$arr = array();
@@ -49,12 +50,34 @@ class droute{
 		}
 	} 
 
+	function get_route_media_img($rid){
+		global $con;
+		$query = "SELECT * FROM route_imgs LEFT JOIN routes ON route_imgs.route_img_rid = routes.id WHERE route_imgs.route_img_rid=".$rid;
+		$result = mysqli_query($con, $query);
+		if($result){
+			$arr = array();
+			$arr2 = array();
+			while($row = mysqli_fetch_array($result)){
+				$arr['id']= $row['route_img_rid'];
+				$arr['img_links']= $row['img_link'];
+				
+				$arr2 []= $arr;
+			}
+			print_r($arr2);
+			return $arr2;
+			
+		}
+	} 
 }
 
 
 $db = new droute();
 
-$db -> get_route_media(11);
+
+
+$f="15";
+$db -> get_route_media($f);
+
 
 
 ?>

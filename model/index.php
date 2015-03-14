@@ -56,15 +56,12 @@ class droute{
 		$result = mysqli_query($con, $query);
 		if($result){
 			$arr = array();
-			$arr2 = array();
 			while($row = mysqli_fetch_array($result)){
 				$arr['id']= $row['route_img_rid'];
-				$arr['img_links']= $row['img_link'];
+				$arr['img_links'][]= $row['img_link'];
 				
-				$arr2 []= $arr;
 			}
-			print_r($arr2);
-			return $arr2;
+			return $arr;
 			
 		}
 	} 
@@ -76,7 +73,7 @@ $db = new droute();
 
 
 $f="15";
-$db -> get_route_media($f);
+print_r($db -> get_route_media_img($f));
 
 
 

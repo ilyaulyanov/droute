@@ -1,12 +1,12 @@
 <?php
-print_r($_GET);
+//print_r($_GET);
 
 require_once('model/index.php');
 $dr = new droute();
 
 $images = $dr->get_route_media_img($_GET['route']);
 $info = $dr->get_route_media($_GET['route']);
-print_r($images);
+//print_r($images);
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +46,11 @@ print_r($images);
       <div class="col l8 route-name left-align white-text">
         <h4><?php echo $_GET['name']; ?></h4>
       </div>
-      <div class="col l2 route-created-by center-align white-text">
-        <p class="">Route created by: </p> 
+      <div class="col l2 route-created-by center-align white-text valign-wrapper">
+        <h6 class="valign">
+         Route created by:
+        </h6>
+       
       </div>
       <div class="col l2 route-created-by left-align white-text">
         <p class="route-creator valign-wrapper"> 

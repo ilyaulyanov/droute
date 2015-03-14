@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Mar 14, 2015 at 12:36 AM
+-- Generation Time: Mar 14, 2015 at 01:57 AM
 -- Server version: 5.6.17-debug-log
 -- PHP Version: 5.5.12
 
@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `categories`
 --
 
+DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
 `id` int(11) NOT NULL,
   `category_name` varchar(200) NOT NULL
@@ -46,6 +47,7 @@ INSERT INTO `categories` (`id`, `category_name`) VALUES
 -- Table structure for table `routes`
 --
 
+DROP TABLE IF EXISTS `routes`;
 CREATE TABLE IF NOT EXISTS `routes` (
 `id` int(11) NOT NULL,
   `route_name` varchar(200) NOT NULL,
@@ -72,6 +74,7 @@ INSERT INTO `routes` (`id`, `route_name`, `category`, `thumb`) VALUES
 -- Table structure for table `routes_staffpicks`
 --
 
+DROP TABLE IF EXISTS `routes_staffpicks`;
 CREATE TABLE IF NOT EXISTS `routes_staffpicks` (
   `routes_id` int(11) NOT NULL,
   `add_date` date NOT NULL
@@ -95,6 +98,7 @@ INSERT INTO `routes_staffpicks` (`routes_id`, `add_date`) VALUES
 -- Table structure for table `route_media`
 --
 
+DROP TABLE IF EXISTS `route_media`;
 CREATE TABLE IF NOT EXISTS `route_media` (
   `rid` int(11) NOT NULL,
   `date_of_creation` date DEFAULT NULL,

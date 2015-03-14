@@ -26,12 +26,35 @@ class droute{
 		}
 	}
 
+	function get_route_media(){
+		global $con;
+		$query = "SELECT * FROM route_media LEFT JOIN routes ON route_media.rid = routes.id 
+										LEFT JOIN categories ON categories.id = routes.category ";
+		$result = mysqli_query($con, $query);
+		if($result){
+			$arr = array();
+			$arr2 = array();
+			while($row = mysqli_fetch_array($result)){
+				$arr['id']= $row['rid'];
+				$arr['route_name']= $row['route_name'];
+				$arr['category_name']=  $row['category_name'];
+				$arr['date']=  $row['date_of_creation'];
+				$arr['thumb'] = $row['thumb'];
+				$arr['text_info'] = $row['info'];
+				$arr2 []= $arr;
+			}
+			print_r($arr2);
+			return $arr2;
+			
+		}
+	} 
+
 }
 
 
-//$db = new droute();
+$db = new droute();
 
-//print_r($db -> get_all_staff_picks());
+$db -> get_route_media();
 
 
 ?>

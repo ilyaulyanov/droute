@@ -14,7 +14,7 @@ $info = $dr->get_route_media($_GET['route']);
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title><?php echo $_GET['name']; ?> - Droute</title>
+  <title><?php echo $info['route_name']; ?> - Droute</title>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
   <!-- CSS  -->
   <link href="css/main.css" type="text/css" rel="stylesheet" />
@@ -43,16 +43,16 @@ $info = $dr->get_route_media($_GET['route']);
 <div class="primary-bg row no-margin z-depth-1">
 <div class="container">
     <div class="row no-margin">
-      <div class="col l8 route-name left-align white-text">
-        <h4><?php echo $_GET['name']; ?></h4>
+      <div class="col l6 m12 s12 route-name left-align white-text">
+        <h4><?php echo $info['route_name']; ?></h4>
       </div>
-      <div class="col l2 route-created-by center-align white-text valign-wrapper">
+      <div class="col l3 m6 s6 route-created-by right-align white-text valign-wrapper">
         <h6 class="valign">
          Route created by:
         </h6>
        
       </div>
-      <div class="col l2 route-created-by left-align white-text">
+      <div class="col l3 m6 s6 route-created-by left-align white-text">
         <p class="route-creator valign-wrapper"> 
           <img src="http://materializecss.com/images/yuna.jpg" alt="" class="valign circle responsive-img"> 
           <span class="valign">Kevin Pilsner</span>
@@ -95,13 +95,21 @@ $info = $dr->get_route_media($_GET['route']);
     </div>
     <div class="col l4 m12 s12">
         <p><strong>Route media <i class="primary-bg-text tiny mdi-action-help tooltipped" data-position="bottom" data-delay="50" data-tooltip="Media taken during the flight"></i></strong></p>
+        <?php if(empty($images)){
+            echo "<div class='card-panel warning warning-bg'>
+          <span class='primary-text'>No media has been found for this route :(
+          </span>
+        </div>";
+          } ?>
        <div class="js-masonry"  data-masonry-options='{ "isFitWidth": true }'>
         <?php 
+
+         
           foreach ($images as $val) {
             # code...
             echo "<div class='media-item w3 h2' style='background:url(\"".$val."\")no-repeat center center / cover'></div>";
           }
-         
+
 
         ?>
         <!--<div class="media-item"></div>

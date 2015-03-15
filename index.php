@@ -5,7 +5,7 @@ $dr = new droute();
 
 $picks = $dr->get_all_staff_picks();
 
-print_r($picks);
+//print_r($picks);
 
 
 //get location of a user and store it in a session
@@ -26,14 +26,15 @@ if(!isset($_SESSION['country'])){
   <title>Droute</title>
 
   <!-- CSS  -->
+  <link href="css/main.css" type="text/css" rel="stylesheet" />
   <link href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="bower_components/materialize/dist/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="white" role="navigation">
+  <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="http://google.ca" class="brand-logo">Droute</a>
+      <div class="nav-wrapper primary-text"><a id="logo-container" href="http://google.ca" class="brand-logo">Droute</a>
         <ul class="right">
          <li><a href="#">Home</a></li> 
          <li><a href="features.php">Features</a></li>
@@ -54,6 +55,8 @@ if(!isset($_SESSION['country'])){
       <div class="container">
         <br><br>
         <h1 class="header center primary-bg-text">Company Objective</h1>
+
+
         <div class="row center">
           <h5 class="header col s12 light">Drone route and media storage in the cloud</h5>
         </div>

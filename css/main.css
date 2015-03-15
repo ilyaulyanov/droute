@@ -29,6 +29,7 @@ background-size: cover;
 	MODULES
 
 */
+div.warning{background:#FBC02D;}
 
 .route-btn{margin-top:1em;width:100%;}
 .no-margin{margin:0!important;}
@@ -37,7 +38,7 @@ background-size: cover;
 .route-cont iframe{height:81vh;}
 .route-creator span{margin-left:0.5em;}
 .route-creator img{width:2.5rem;}
-
+.route-created-by{height:68px;}
 /* 
 
 	THEME
@@ -79,7 +80,12 @@ background-size: cover;
 .divider{
 	color:#B6B6B6;
 }
-
+.warning-text{
+	color:#FFEB3B;
+}
+.warning-bg{
+	background: #FFEB3B;
+}
 
 
 .row .media-item {
@@ -87,7 +93,7 @@ background-size: cover;
   width:  120px;
   height: 100px;
   float: left;
-  background:url('../img/placeholder.png')no-repeat bottom center / cover;
+  background:url('../img/placeholder.png')no-repeat center center / cover;
 }
 
 .media-item.w2 { width:  240px; }

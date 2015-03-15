@@ -46,15 +46,26 @@ background-size: cover;
 
 .dark-primary-bg{
 	background:#0288D1;
+	background-color:#0288D1 !important;
 }
 .primary-bg{
 	background:#03A9F4;
+
+}	
+.primary-card{
+
+	color:#0288D1;
 }
+
 .light-primary-bg{
 	background:#B3E5FC;
 }
 .accent-bg{
 	background:#8BC34A;
+}
+
+.accent {
+	color:#8BC34A !important;
 }
 .white-text{
 	color:#FFFFFF;

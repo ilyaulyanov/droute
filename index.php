@@ -27,6 +27,7 @@ if(!isset($_SESSION['country'])){
 
   <!-- CSS  -->
   <link href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="bower_components/materialize/dist/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
@@ -52,7 +53,7 @@ if(!isset($_SESSION['country'])){
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Company Objective</h1>
+        <h1 class="header center primary-bg-text">Company Objective</h1>
         <div class="row center">
           <h5 class="header col s12 light">Drone route and media storage in the cloud</h5>
         </div>
@@ -74,28 +75,28 @@ if(!isset($_SESSION['country'])){
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="mdi-image-flash-on"></i></h2>
-            <h5 class="center">Geotagging & Route Storage</h5>
+            <h2 class="center accent"><i class="mdi-image-flash-on"></i></h2>
+            <h5 class="center, primary-text">Geotagging & Route Storage</h5>
 
-            <p class="light">Securely store route waypoints and find routes relative to your location that have been uploaded by the Droute community. Easily access your previously flown routes for repeat projects and aerial surveying.</p>
+            <p class="primary-text">Securely store route waypoints and find routes relative to your location that have been uploaded by the Droute community. Easily access your previously flown routes for repeat projects and aerial surveying.</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="mdi-social-group"></i></h2>
-            <h5 class="center">Private & Public Profiles</h5>
+            <h2 class="center accent"><i class="mdi-social-group"></i></h2>
+            <h5 class="center primary-text">Private & Public Profiles</h5>
 
-            <p class="light">Public profiles are completely free to use and always will be. Upgrade to an enterpise account to securely store routes and content privately; along with unlimited storage in the cloud.</p>
+            <p class="primary-text">Public profiles are completely free to use and always will be. Upgrade to an enterpise account to securely store routes and content privately; along with unlimited storage in the cloud.</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="mdi-action-settings"></i></h2>
-            <h5 class="center">Route Media Timeline</h5>
+            <h2 class="center accent"><i class="mdi-action-settings"></i></h2>
+            <h5 class="center primary-text">Route Media Timeline</h5>
 
-            <p class="light">The route media timeline allows users to timestamp there uploads and share drone generated content such as a photo gallery and video with their followers.</p>
+            <p class="primary-text">The route media timeline allows users to timestamp there uploads and share drone generated content such as a photo gallery and video with their followers.</p>
           </div>
         </div>
       </div>
@@ -120,20 +121,20 @@ if(!isset($_SESSION['country'])){
 
       <div class="row">
         <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Compatable Drones</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-          <h4 class="header center text-lighten-2">Staff Picks</h4>
+          <h3><i class="mdi-content-send accent"></i></h3>
+          <h4 class="primary-text" >Compatable Drones</h4>
+          <p class="left-align primary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <h4 class="header center primary-text">Staff Picks</h4>
             <div class="row">
                 <?php
                   foreach ($picks as $card) {
                     echo "<div class=\"col s12 m6\"> <div class=\"card small\"><div class=\"card-image\">";
                     echo "<img src=\"".$card['thumb']."\">";
                     echo "<span class=\"card-title\">".$card['route_name']."</span>";
-                    echo "</div> <div class=\"card-content\">";
+                    echo "</div> <div class=\"card-content primary-bg\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['add_date']."</p>";
-                    echo "</div><div class=\"card-action\">";
-                    echo "<a href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a>";
+                    echo "</div><div class=\"card-action dark-primary-bg\">";
+                    echo "<a class=\"accent\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a>";
                     echo "</div></div></div>";
                   }
                 ?>
@@ -156,7 +157,7 @@ if(!isset($_SESSION['country'])){
     <div class="parallax"><img src="img/parrot.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer dark-primary-bg">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">

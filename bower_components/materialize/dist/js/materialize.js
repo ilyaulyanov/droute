@@ -866,6 +866,7 @@ $(document).ready(function(){
         });
 
         function updateParallax(initial) {
+        	console.log('titties', initial);
           var container_height;
           if (window_width < 992) {
             container_height = ($this.height() > 0) ? $this.height() : $this.children("img").height();
@@ -887,6 +888,7 @@ $(document).ready(function(){
             $this.children("img").first().css('bottom', parallax + "px");
           }
           if (initial) {
+          	console.log($this.children("img").first());
             $this.children("img").first().css('display', 'block');
           }
         }

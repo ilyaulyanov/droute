@@ -112,7 +112,7 @@ if(!isset($_SESSION['country'])){
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12">Share and save routes on your Droute profile.</h5>
         </div>
       </div>
     </div>
@@ -126,7 +126,24 @@ if(!isset($_SESSION['country'])){
         <div class="col s12 center">
           <h3><i class="mdi-content-send accent"></i></h3>
           <h4 class="primary-text" >Compatable Drones</h4>
-          <p class="left-align primary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+               <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/parrot2.jpg">
+              <span class="card-title">Parrot Drone</span>
+            </div>
+            <div class="card-content">
+              <p class="primary-bg">I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Parrot Drone</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
           <h4 class="header center primary-text">Staff Picks</h4>
             <div class="row">
                 <?php
@@ -137,7 +154,7 @@ if(!isset($_SESSION['country'])){
                     echo "</div> <div class=\"card-content primary-bg\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['add_date']."</p>";
                     echo "</div><div class=\"card-action dark-primary-bg\">";
-                    echo "<a class=\"accent\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a>";
+                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
                     echo "</div></div></div>";
                   }
                 ?>

@@ -1,4 +1,14 @@
 <?php
+require_once('model/index.php');
+
+$dr = new droute();
+$cat1="4";
+$cat2="5";
+$cat3="6";
+$scenic = $dr->get_route_by_cat($cat1);
+$historical = $dr->get_route_by_cat($cat2);
+$trending = $dr->get_route_by_cat($cat3);
+//print_r($picks);
 
 ?>
 
@@ -10,12 +20,13 @@
   <title>Droute</title>
 
   <!-- CSS  -->
+
   <link href="css/main.css" type="text/css" rel="stylesheet" />
   <link href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="bower_components/materialize/dist/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
- <nav class="white" role="navigation">
+ <nav class="dark-primary-bg" role="navigation">
     <div class="container">
       <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Droute</a>
         <ul class="right">
@@ -46,23 +57,58 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row center">
-      <div class="col s12 l4 ">
-        <h5>The Phantom Menace</h5>
-          <p>Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? You're all clear, kid. Let's blow this thing and go home!</p>
-      </div>
-      <div class="col s12 l4">
-        <h5>The Empire Strikes Back</h5>
-        <p>Don't underestimate the Force. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. I want to come with you to Alderaan. There's nothing for me here now. I want to learn the ways of the Force and be a Jedi, like my father before me.</p>
-      </div>
-      <div class="col s12 l4">
-        <h5>The Clone Wars</h5>
-        <p>I care. So, what do you think of her, Han? Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. Leave that to me. Send a distress signal, and inform the Senate that all on board were killed. I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to Alderaan-- I care. So, what do you think of her, Han?</p>
-      </div>
-      </div>
-    </div>
-  </div>
+  
+    
+            <div class="row">
+              <div class="col m4 s12 ">
+              <h4 class="header center primary-text">Scenic</h4>
+                <?php
+                  foreach ($scenic as $card) {
+                    echo "<div class=\"card small\"><div class=\"card-image\">";
+                    echo "<img src=\"".$card['thumb']."\">";
+                    echo "<span class=\"card-title\">".$card['route_name']."</span>";
+                    echo "</div> <div class=\"card-content primary-bg\">";
+                    echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
+                    echo "</div><div class=\"card-action dark-primary-bg\">";
+                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "</div></div>";
+                  }
+                ?>
+              </div>
+              <div class="col m4 s12 ">
+              <h4 class="header center primary-text">Historical</h4>
+                <?php
+                  foreach ($historical as $card) {
+                    echo "<div class=\"card small\"><div class=\"card-image\">";
+                    echo "<img src=\"".$card['thumb']."\">";
+                    echo "<span class=\"card-title\">".$card['route_name']."</span>";
+                    echo "</div> <div class=\"card-content primary-bg\">";
+                    echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
+                    echo "</div><div class=\"card-action dark-primary-bg\">";
+                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "</div></div>";
+                  }
+                ?>
+              </div>
+              <div class="col m4 s12 ">
+              <h4 class="header center primary-text">Trending</h4>
+                <?php
+                  foreach ($trending as $card) {
+                    echo "<div class=\"card small\"><div class=\"card-image\">";
+                    echo "<img src=\"".$card['thumb']."\">";
+                    echo "<span class=\"card-title\">".$card['route_name']."</span>";
+                    echo "</div> <div class=\"card-content primary-bg\">";
+                    echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
+                    echo "</div><div class=\"card-action dark-primary-bg\">";
+                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "</div></div>";
+                  }
+                ?>
+              </div>
+            </div>
+
+
+
 
 
 

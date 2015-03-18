@@ -26,6 +26,29 @@ class droute{
 		}
 	}
 
+	//get routes by cat
+	function get_route_by_cat($cat){
+		global $con;
+		$query = "SELECT * FROM routes LEFT JOIN categories ON categories.id = routes.category WHERE routes.category=".$cat." ";
+		$result = mysqli_query($con, $query);
+		//print_r($result);
+		if($result){
+			$arr = array();
+			$arr2 = array();
+			while($row = mysqli_fetch_array($result)){
+				$arr['id']= $row['id'];
+				$arr['route_name']= $row['route_name'];
+				$arr['category_name']=  $row['category_name'];
+				$arr['created_date']=  $row['created_date'];
+				$arr['thumb'] = $row['thumb'];
+				$arr2 []= $arr;
+			}
+			//print_r($arr2);
+			return $arr2;
+			
+		}
+	}
+
 	function get_route_media($rid){
 		global $con;
 		$query = "SELECT * FROM route_media LEFT JOIN routes ON route_media.rid = routes.id 
@@ -64,14 +87,14 @@ class droute{
 	} 
 }
 
-
-//$db = new droute();
-
-
-
-//$f="15";
-//print_r($db -> get_route_media_img($f));
+/*
+$db = new droute();
 
 
+
+$f="5";
+print_r($db -> get_route_by_cat($f));
+
+*/
 
 ?>

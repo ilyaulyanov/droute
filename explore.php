@@ -8,6 +8,7 @@ $cat3="6";
 $scenic = $dr->get_route_by_cat($cat1);
 $historical = $dr->get_route_by_cat($cat2);
 $trending = $dr->get_route_by_cat($cat3);
+$picks = $dr->get_all_staff_picks();
 //print_r($picks);
 
 ?>
@@ -28,8 +29,8 @@ $trending = $dr->get_route_by_cat($cat3);
 <body>
  <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Droute</a>
-        <ul class="right">
+      <div class="nav-wrapper "><a id="logo-container" href="#" class="brand-logo hide-on-small-only">Droute</a>
+        <ul class="right hide-on-small-only">
          <li><a href="index.php">Home</a></li> 
          <li><a href="features.php">Features</a></li>
          <li><a href="#">Explore</a></li>
@@ -45,7 +46,7 @@ $trending = $dr->get_route_by_cat($cat3);
   </nav>
 
 
-  <div class="row intoExplore">
+  <div class="row intoExplore hide-on-small-only">
     <div class="col s12 m12">
       <div class="container">
           <div class="row">
@@ -57,7 +58,21 @@ $trending = $dr->get_route_by_cat($cat3);
     </div>
   </div>
 
-  
+  <div class="row">
+      <h4 class="header center primary-text">Explore Our Picks</h4>
+        <?php
+          foreach (array_slice($picks, 0, 4) as $card) {
+          echo "<div class=\"col s12 m3\"><div class=\"card small\"><div class=\"card-image\">";
+          echo "<img src=\"".$card['thumb']."\">";
+          echo "<span class=\"card-title\">".$card['route_name']."</span>";
+          echo "</div> <div class=\"card-content primary-bg\">";
+          echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['add_date']."</p>";
+          echo "</div><div class=\"card-action dark-primary-bg\">";
+          echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+          echo "</div></div></div>";
+          }
+        ?>
+  </div>  
     
             <div class="row">
               <div class="col m4 s12 ">

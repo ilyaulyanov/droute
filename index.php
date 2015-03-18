@@ -121,29 +121,43 @@ if(!isset($_SESSION['country'])){
 
   <div class="container">
     <div class="section">
-
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send accent"></i></h3>
           <h4 class="primary-text" >Compatable Drones</h4>
-               <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
-            <div class="card-image">
-              <img src="img/parrot2.jpg">
-              <span class="card-title">Parrot Drone</span>
+          <div class="row">
+            <div class="col l6 m6 s12">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/parrot3.jpg">
+                  <span class="card-title">Parrot Drone</span>
+                </div>
+                <div class="card-content primary-bg">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action dark-primary-bg">
+                  <a class=" white-text" href="#">Purchase</a><i class="small mdi-action-add-shopping-cart"></i>
+                </div>
+              </div>
             </div>
-            <div class="card-content">
-              <p class="primary-bg">I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">Parrot Drone</a>
-              
+            <div class="col l6 m6 s12">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/djiPhantom2.jpg">
+                  <span class="card-title">DJI Phantom 2</span>
+                </div>
+                <div class="card-content primary-bg">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action dark-primary-bg">
+                  <a class=" white-text" href="#">Purchase</a><i class="small mdi-action-add-shopping-cart"></i>
+                </div>              
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+
           <h4 class="header center primary-text">Staff Picks</h4>
             <div class="row">
                 <?php

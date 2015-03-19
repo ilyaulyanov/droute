@@ -16,9 +16,9 @@
 <body>
  <nav class="white" role="navigation">
     <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Droute</a>
+      <div class="nav-wrapper"><a id="logo-container" href="/droute" class="brand-logo">Droute</a>
         <ul class="right">
-         <li><a href="index.php">Home</a></li> 
+         <li><a href="/droute">Home</a></li> 
          <li><a href="features.php">Features</a></li>
          <li><a href="explore.php">Explore</a></li>
          <li><a href="#">Contact</a></li>

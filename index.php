@@ -34,9 +34,9 @@ if(!isset($_SESSION['country'])){
 <body>
   <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper primary-text"><a id="logo-container" href="http://google.ca" class="brand-logo">Droute</a>
+      <div class="nav-wrapper primary-text"><a id="logo-container" href="/droute" class="brand-logo">Droute</a>
         <ul class="right">
-         <li><a href="#">Home</a></li> 
+         <li><a href="/droute">Home</a></li> 
          <li><a href="features">Features</a></li>
          <li><a href="explore">Explore</a></li>
          <li><a href="contact">Contact</a></li>

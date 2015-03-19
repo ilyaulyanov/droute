@@ -44,7 +44,7 @@ class droute{
 				$arr['thumb'] = $row['thumb'];
 				$arr2 []= $arr;
 			}
-			print_r($arr2);
+			//print_r($arr2);
 			return $arr2;
 			
 		}
@@ -89,7 +89,7 @@ class droute{
 	} 
 }
 
-
+/*
 $db = new droute();
 
 
@@ -97,6 +97,6 @@ $db = new droute();
 $f="5";
 print_r($db -> get_route_by_cat($f));
 
-
+*/
 
 ?>

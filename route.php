@@ -134,13 +134,8 @@ $info = $dr->get_route_media($_GET['route']);
     </div>
               
   </div>
-  <h3>Route timeline</h3>
-  <div class="container">
+  <!--<h3>Route timeline</h3>-->
 
-    <div class="row">
-      
-    </div>
-  </div>
 
 
 

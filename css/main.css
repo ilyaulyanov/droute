@@ -32,6 +32,7 @@ div.warning{background:#FBC02D;}
 
 .route-btn{margin-top:1em;width:100%;}
 .no-margin{margin:0!important;}
+div.no-margin-btm{margin-bottom:0;}
 .responsive-image{width:200px;}
 .route-cont{margin-bottom:0;}
 .route-cont iframe{height:81vh;}
@@ -52,7 +53,7 @@ div.warning{background:#FBC02D;}
 	background-color:#0288D1 !important;
 }
 .primary-bg{
-	background:#03A9F4;
+	background:#03A9F4!important;
 
 }	
 .primary-card{

@@ -31,10 +31,10 @@ $picks = $dr->get_all_staff_picks();
     <div class="container">
       <div class="nav-wrapper "><a id="logo-container" href="#" class="brand-logo hide-on-small-only">Droute</a>
         <ul class="right hide-on-small-only">
-         <li><a href="index.php">Home</a></li> 
-         <li><a href="features.php">Features</a></li>
+         <li><a href="index">Home</a></li> 
+         <li><a href="features">Features</a></li>
          <li><a href="#">Explore</a></li>
-         <li><a href="contact.php">Contact</a></li>
+         <li><a href="contact">Contact</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -59,7 +59,7 @@ $picks = $dr->get_all_staff_picks();
           echo "</div> <div class=\"card-content primary-bg\">";
           echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['add_date']."</p>";
           echo "</div><div class=\"card-action dark-primary-bg\">";
-          echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+          echo "<a class=\"white-text\" href=\"route?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
           echo "</div></div></div>";
           }
         ?>
@@ -76,7 +76,7 @@ $picks = $dr->get_all_staff_picks();
                     echo "</div> <div class=\"card-content primary-bg\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
                     echo "</div><div class=\"card-action dark-primary-bg\">";
-                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "<a class=\"white-text\" href=\"route?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
                     echo "</div></div>";
                   }
                 ?>
@@ -91,7 +91,7 @@ $picks = $dr->get_all_staff_picks();
                     echo "</div> <div class=\"card-content primary-bg\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
                     echo "</div><div class=\"card-action dark-primary-bg\">";
-                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "<a class=\"white-text\" href=\"route?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
                     echo "</div></div>";
                   }
                 ?>
@@ -106,7 +106,7 @@ $picks = $dr->get_all_staff_picks();
                     echo "</div> <div class=\"card-content primary-bg\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
                     echo "</div><div class=\"card-action dark-primary-bg\">";
-                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "<a class=\"white-text\" href=\"route?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
                     echo "</div></div>";
                   }
                 ?>

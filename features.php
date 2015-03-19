@@ -17,12 +17,12 @@
 <body>
  <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Droute</a>
+      <div class="nav-wrapper"><a id="logo-container" href="index" class="brand-logo">Droute</a>
         <ul class="right">
-         <li><a href="index.php white-text">Home</a></li> 
+         <li><a href="index">Home</a></li> 
          <li><a href="#" class="active">Features</a></li>
-         <li><a href="explore.php">Explore</a></li>
-         <li><a href="contact.php">Contact</a></li>
+         <li><a href="explore">Explore</a></li>
+         <li><a href="contact">Contact</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">

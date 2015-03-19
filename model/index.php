@@ -29,7 +29,7 @@ class droute{
 	//get routes by cat
 	function get_route_by_cat($cat){
 		global $con;
-		$query = "SELECT * FROM routes LEFT JOIN categories ON categories.id = routes.category WHERE routes.category=".$cat." ";
+		$query = "SELECT * FROM routes  INNER  JOIN route_media ON route_media.rid LEFT JOIN categories ON categories.id = routes.category   WHERE routes.id=route_media.rid   AND routes.category=".$cat ;
 		$result = mysqli_query($con, $query);
 		//print_r($result);
 		if($result){
@@ -37,13 +37,14 @@ class droute{
 			$arr2 = array();
 			while($row = mysqli_fetch_array($result)){
 				$arr['id']= $row['id'];
+				$arr['rid']= $row['rid'];
 				$arr['route_name']= $row['route_name'];
 				$arr['category_name']=  $row['category_name'];
 				$arr['created_date']=  $row['created_date'];
 				$arr['thumb'] = $row['thumb'];
 				$arr2 []= $arr;
 			}
-			//print_r($arr2);
+			print_r($arr2);
 			return $arr2;
 			
 		}

@@ -6,7 +6,7 @@ $dr = new droute();
 
 $images = $dr->get_route_media_img($_GET['route']);
 $info = $dr->get_route_media($_GET['route']);
-//print_r($images);
+//print_r($info);
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +24,11 @@ $info = $dr->get_route_media($_GET['route']);
 <body>
  <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo white-text">Droute</a>
+      <div class="nav-wrapper"><a id="logo-container" href="index.php" class="brand-logo white-text">Droute</a>
         <ul class="right white-text">
          <li><a href="index.php">Home</a></li> 
          <li><a href="features.php">Features</a></li>
-         <li><a href="#">Explore</a></li>
+         <li><a href="explore.php">Explore</a></li>
          <li><a href="contact.php">Contact</a></li>
         </ul>
 
@@ -80,6 +80,10 @@ $info = $dr->get_route_media($_GET['route']);
               <tr>
                 <td>Date</td>
                 <td><?php echo $info['date']; ?></td>
+              </tr>
+              <tr>
+                <td>Camera</td>
+                <td><?php echo $info['camera']; ?></td>
               </tr>
             </tbody>
         </table>

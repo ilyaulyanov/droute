@@ -64,6 +64,7 @@ class droute{
 				$arr['date']=  $row['date_of_creation'];
 				$arr['thumb'] = $row['thumb'];
 				$arr['text_info'] = $row['info'];
+				$arr['camera'] = $row['camera'];
 				
 			}
 			return $arr;
@@ -87,7 +88,7 @@ class droute{
 	} 
 }
 
-/*
+
 $db = new droute();
 
 
@@ -95,6 +96,6 @@ $db = new droute();
 $f="5";
 print_r($db -> get_route_by_cat($f));
 
-*/
+
 
 ?>

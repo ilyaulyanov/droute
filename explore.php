@@ -21,7 +21,7 @@ $picks = $dr->get_all_staff_picks();
   <title>Droute</title>
 
   <!-- CSS  -->
-
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
   <link href="css/main.css" type="text/css" rel="stylesheet" />
   <link href="bower_components/materialize/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="bower_components/materialize/dist/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>

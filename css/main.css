@@ -39,6 +39,9 @@ div.warning{background:#FBC02D;}
 .route-creator span{margin-left:0.5em;}
 .route-creator img{width:2.5rem;}
 .route-created-by{height:68px;}
+.parallax img{  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;}
 /* 
 
 	THEME

@@ -36,8 +36,8 @@ class droute{
 			$arr = array();
 			$arr2 = array();
 			while($row = mysqli_fetch_array($result)){
-				$arr['id']= $row['id'];
-				$arr['rid']= $row['rid'];
+				$arr['id']= $row['rid'];
+				$arr['cid']= $row['id'];
 				$arr['route_name']= $row['route_name'];
 				$arr['category_name']=  $row['category_name'];
 				$arr['created_date']=  $row['created_date'];

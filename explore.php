@@ -76,7 +76,7 @@ $picks = $dr->get_all_staff_picks();
                     echo "</div> <div class=\"card-content primary-bg\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
                     echo "</div><div class=\"card-action dark-primary-bg\">";
-                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['rid']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
                     echo "</div></div>";
                   }
                 ?>
@@ -91,7 +91,7 @@ $picks = $dr->get_all_staff_picks();
                     echo "</div> <div class=\"card-content primary-bg\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
                     echo "</div><div class=\"card-action dark-primary-bg\">";
-                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['rid']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
                     echo "</div></div>";
                   }
                 ?>
@@ -106,7 +106,7 @@ $picks = $dr->get_all_staff_picks();
                     echo "</div> <div class=\"card-content primary-bg\">";
                     echo "<p>Route category: ".$card['category_name']."</p><p>Added on: ".$card['created_date']."</p>";
                     echo "</div><div class=\"card-action dark-primary-bg\">";
-                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['rid']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
+                    echo "<a class=\"white-text\" href=\"route.php?route=".$card['id']."&name=".$card['route_name']."\">Explore the route</a><i class=\"mdi-content-send\"></i>";
                     echo "</div></div>";
                   }
                 ?>

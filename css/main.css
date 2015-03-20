@@ -118,7 +118,8 @@ Conact page *Gordon
 	background-size: cover;
 	background-position: 50%; 
 }
-.top-img-rep{
-	height: 50%;
-	width:100%;
+.about-lead{
+  	padding-left: 10%;
+ 	padding-right: 10%;
+	margin-bottom: 40px;
 }

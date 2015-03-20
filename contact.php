@@ -37,10 +37,18 @@
   </nav> 
 
 
-  <div class="header-about">
+  <div class="header-about hide-on-small-only">
   </div>
 
+  <!-- content -->
 
+  <div class='row valign-wrapper'>
+    <div class="col l12">
+      <h3 class='center-align about-lead'>Droute tset t set tst tset s et ste t s set  tsetse  tset  tes tes t sesef  fse  fsf srtgtrtgdsadsad</h3>
+    </div>
+  </div>
+
+  
     <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="bower_components/materialize/dist/js/init.js"></script>

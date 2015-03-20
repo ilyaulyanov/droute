@@ -34,8 +34,8 @@ if(!isset($_SESSION['country'])){
 <body>
   <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper primary-text"><a id="logo-container" href="http://google.ca" class="brand-logo">Droute</a>
-        <ul class="right">
+      <div class="nav-wrapper primary-text"><a id="logo-container" href="http://google.ca" class="brand-logo hide-on-med-and-down">Droute</a>
+        <ul class="right hide-on-small-only">
          <li><a href="#">Home</a></li> 
          <li><a href="features">Features</a></li>
          <li><a href="explore">Explore</a></li>
@@ -43,7 +43,10 @@ if(!isset($_SESSION['country'])){
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Navbar Link</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="features.php">Feature</a></li>
+          <li><a href="explore.php">Explore</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </div>

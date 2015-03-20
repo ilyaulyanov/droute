@@ -108,3 +108,17 @@ div.no-margin-btm{margin-bottom:0;}
 .media-item.h2 { height: 200px; }
 .media-item.h3 { height: 300px; }
 .media-item.h4 { height: 400px; }
+
+/*
+Conact page *Gordon
+*/
+.header-about{
+	height:300px;
+	background-image: url('http://dummyimage.com/hd1080');
+	background-size: cover;
+	background-position: 50%; 
+}
+.top-img-rep{
+	height: 50%;
+	width:100%;
+}

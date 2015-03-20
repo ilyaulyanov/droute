@@ -95,7 +95,7 @@ $info = $dr->get_route_media($_GET['route']);
       </div>
     <div class="col l6 m9 s12">
       <p><strong>Flight map <i class="primary-bg-text tiny mdi-action-help tooltipped" data-position="bottom" data-delay="50" data-tooltip="Generated fligh path for a route"></i></strong></p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20821.349314510637!2d-123.11645662524415!3d49.28267527248596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1426276883227" width="100%" height="100vh" frameborder="0" style="border:0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20821.349314510637!2d-123.11645662524415!3d49.28267527248596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1426276883227" width="100%" height="50vh" frameborder="0" style="border:0"></iframe>
     </div>
     <div class="col l4 m12 s12">
         <p><strong>Route media <i class="primary-bg-text tiny mdi-action-help tooltipped" data-position="bottom" data-delay="50" data-tooltip="Media taken during the flight"></i></strong></p>

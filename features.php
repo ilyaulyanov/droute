@@ -17,10 +17,17 @@
 <body>
  <nav class="dark-primary-bg" role="navigation">
     <div class="container">
+<<<<<<< HEAD
       <div class="nav-wrapper"><a id="logo-container" href="index" class="brand-logo hide-on-med-and-down">Droute</a>
         <ul class="right hide-on-small-only">
          <li><a href="index">Home</a></li> 
          <li><a href="#" class="active">Features</a></li>
+=======
+      <div class="nav-wrapper"><a id="logo-container" href="/droute" class="brand-logo">Droute</a>
+        <ul class="right">
+         <li><a href="/droute">Home</a></li> 
+         <li><a href="features" class="active">Features</a></li>
+>>>>>>> origin/master
          <li><a href="explore">Explore</a></li>
          <li><a href="contact">Contact</a></li>
         </ul>

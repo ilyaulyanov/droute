@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col s12  ">
         <ul class="tabs">
-          <li class="tab col s6"><a class="active" href="#about-us">About Drout</a></li>
+          <li class="tab col s6"><a class="active" href="#about-us">About Droute</a></li>
           <li class="tab col s6"><a href="#jobs">Jobs</a></li>
         </ul>
       </div>

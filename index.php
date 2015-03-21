@@ -131,13 +131,12 @@ if(!isset($_SESSION['country'])){
           <div class="row">
             <div class="col l6 m6 s12">
               <div class="card">
-                <div class="card-image img-tint">
+                <div class="card-image">
                   <img src="img/parrot3.jpg">
                   <span class="card-title">Parrot Drone</span>
                 </div>
                 <div class="card-content primary-bg">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                  <p>With a single touch to your screen, you can control your AR.Drone 2.0 to take-off, land, hover and flip!</p>
                 </div>
                 <div class="card-action dark-primary-bg">
                   <a class=" white-text" href="#">Purchase</a><i class="small mdi-action-add-shopping-cart"></i>
@@ -146,13 +145,12 @@ if(!isset($_SESSION['country'])){
             </div>
             <div class="col l6 m6 s12">
               <div class="card">
-                <div class="card-image img-tint">
+                <div class="card-image">
                   <img src="img/djiPhantom2.jpg">
                   <span class="card-title">DJI Phantom 2</span>
                 </div>
                 <div class="card-content primary-bg">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                  <p>The DJI Phantom 2 is a robust and versatile drone for recording footage and navigating your routes.</p>
                 </div>
                 <div class="card-action dark-primary-bg">
                   <a class=" white-text" href="#">Purchase</a><i class="small mdi-action-add-shopping-cart"></i>

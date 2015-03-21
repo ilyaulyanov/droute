@@ -48,6 +48,11 @@ div.no-margin-btm{margin-bottom:0;}
 
 */
 
+.img-tint {
+
+	 background:rgba(0,0,0,.5);
+}
+
 .dark-primary-bg{
 	background:#0288D1;
 	background-color:#0288D1 !important;
@@ -110,7 +115,7 @@ div.no-margin-btm{margin-bottom:0;}
 .media-item.h4 { height: 400px; }
 
 /*
-Conact page *Gordon
+Contact page *Gordon
 */
 .header-about{
 	height:300px;

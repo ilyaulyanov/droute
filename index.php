@@ -57,11 +57,11 @@ if(!isset($_SESSION['country'])){
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center primary-bg-text">Company Objective</h1>
+        <h1 class="header center primary-bg-text">Droute</h1>
 
 
         <div class="row center">
-          <h5 class="header col s12 light">Drone route and media storage in the cloud</h5>
+          <h5 class="header col s12 light">Our goal is to build an online community of drone enthusiasts while providing secure drone route and media storage in the cloud.</h5>
         </div>
         <div class="row center">
           <p class="row center"></p>
@@ -127,11 +127,11 @@ if(!isset($_SESSION['country'])){
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send accent"></i></h3>
-          <h4 class="primary-text" >Compatable Drones</h4>
+          <h4 class="primary-text" >Compatible Drones</h4>
           <div class="row">
             <div class="col l6 m6 s12">
               <div class="card">
-                <div class="card-image">
+                <div class="card-image img-tint">
                   <img src="img/parrot3.jpg">
                   <span class="card-title">Parrot Drone</span>
                 </div>
@@ -146,7 +146,7 @@ if(!isset($_SESSION['country'])){
             </div>
             <div class="col l6 m6 s12">
               <div class="card">
-                <div class="card-image">
+                <div class="card-image img-tint">
                   <img src="img/djiPhantom2.jpg">
                   <span class="card-title">DJI Phantom 2</span>
                 </div>

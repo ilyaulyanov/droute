@@ -1,8 +1,24 @@
 <?php
-require_once('model/index.php');
 session_start();
- echo $_SESSION['email'];
-  echo $_SESSION['name'];
+require_once('model/index.php');
+
+if(isset($_SESSION['name'])){
+  ?>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".log-text").html('<?php echo $_SESSION['name']." Logout" ?>');
+      $(".log-text").attr("href", "<?php session_destroy(); ?>");
+    })
+  </script>
+  <?php
+
+}else{
+  ?>
+<?php
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +41,8 @@ session_start();
          <li><a href="index.php">Home</a></li> 
          <li><a href="features.php">Features</a></li>
          <li><a href="explore.php">Explore</a></li>
-         <li><a href="#">Contact</a></li>
-         <li><a href="#" class='valign-wrapper log'><i class="tiny mdi-action-perm-identity"></i><span class="log">Login</span></a></li>
+         <li><a href="contact.php">Contact</a></li>
+         <li class="logged"><a class="log-text" href="login.php">Login</a></li>
         </ul>
         
         <ul id="nav-mobile" class="side-nav">
@@ -112,14 +128,18 @@ session_start();
   <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
   <script>
   $(document).ready(function(){
+    var arr=[];
     $('#log').click(function(){
       $.post("model/login.php", {
           email:$("#email").val(),
           pass:$("#password").val(),
       },
       function(resp){
-          console.log(resp);
+          //console.log(resp);
           resp = $.parseJSON(resp);
+          arr['name']=resp.name;
+          arr['log']=resp.log;
+          
       })
     })
    

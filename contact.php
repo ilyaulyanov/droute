@@ -1,4 +1,24 @@
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <?php
+session_start();
+var_dump($_SESSION);
+require_once('model/index.php');
+
+if(isset($_SESSION['name'])){
+  ?>
+  <script>
+    $(document).ready(function(){
+      $(".log-text").html('<?php echo $_SESSION['name']." Logout" ?>');
+      $(".log-text").attr("href", "<?php session_destroy(); ?>");
+    })
+  </script>
+  <?php
+
+}else{
+  ?>
+<?php
+
+}
 
 ?>
 
@@ -23,8 +43,7 @@
          <li><a href="features.php">Features</a></li>
          <li><a href="explore.php">Explore</a></li>
          <li><a href="#">Contact</a></li>
-         <li><a href="login.php" class='valign-wrapper log'><i class="tiny mdi-action-perm-identity"></i><span class="log">Login</span></a></li>
-        </ul>
+         <li class="logged"><a class="log-text" href="login.php">Login</a></li>        </ul>
         
         <ul id="nav-mobile" class="side-nav">
           <li><a href="index.php">Home</a></li>

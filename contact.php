@@ -71,11 +71,27 @@
         </div>
         <div class="divider"></div>
         <div class='row valign-wrapper left-align'>
-          <div class='col s6'>
-           <h5>asdasdasdasdasdasdasdasd asdasdasd asdas  adas  dasd d sa dasd asdas asd asd  asd as d dasda sdas</h5>
+          <div class='col s8'>
+           <div row>
+             <div class='col s12'>
+              <h3>A Remote and Flexible Workplace</h3>
+              <h5>We encourage employees to build amazing things with a high level of autonomy and self-direction. Work/life balance is important to us, which is why we offer flexible work schedules and unlimited PTO. We believe that if a job allows for it, people should work wherever they're happiest.</h5>
+             </div>
+           </div>
+           <div row>
+             <div class='col s12'>
+              <h3>Our office</h3>
+              <h5>Our office is base in downtown Vancouver. We have unique spaces like a Bat Cave and a think tank to rejuvenate your creativity. We also have a bike room where you can store your bike.</h5>
+             </div>
+           </div>
           </div>
-          <div class='col s6'>
-          <h5>asdasdasdasdasdasdasdasd asdasdasd asdas  adas  dasd d sa dasd asdas asd asd  asd as d dasda sdas</h5>
+          <div class='col s4'>
+            <div class="card-panel dark-primary-bg">
+              <span class="white-text">
+                <h4>Open Positions</h4>
+                Currently we do not have any openings.
+              </span>
+            </div>
           </div>
         </div>
       </div>

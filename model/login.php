@@ -15,13 +15,14 @@ require("connect.php");
 	if($result){
 		$on=true;
 		$arr['name']=$name;
-		$arr['log']=true;
-		session_start();
+		$arr['log']=true;	
 		$_SESSION['id'] = $id;
 		$_SESSION['email'] = $email;
 		$_SESSION['name'] = $name;
 		$jsonData = json_encode($arr);
 		echo $jsonData;
+		//header('Location: ../contact.php');
+		exit;
 	}else{
 		$on=false;
 		$arr['log']=false;

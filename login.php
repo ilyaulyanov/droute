@@ -1,26 +1,7 @@
 <?php
 session_start();
 require_once('model/index.php');
-
-if(isset($_SESSION['name'])){
-  ?>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $(".log-text").html('<?php echo $_SESSION['name']." Logout" ?>');
-      $(".log-text").attr("href", "<?php session_destroy(); ?>");
-    })
-  </script>
-  <?php
-
-}else{
-  ?>
-<?php
-
-}
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,6 +43,7 @@ if(isset($_SESSION['name'])){
     <div class="row">
       <div class='col s8'>
         <div class="row">
+          <form>
             <div class="row">
               <div class="input-field col s12">
                 <input id="email" type="email" class="validate">
@@ -146,5 +128,24 @@ if(isset($_SESSION['name'])){
   }) 
   </script>
 </body>
+<?php
+
+if(isset($_SESSION['name'])){
+  ?>
+  <script>
+    $(document).ready(function(){
+      $(".log-text").html('<?php echo $_SESSION["name"]." Logout" ?>');
+      $(".log-text").attr("href", "<?php session_destroy(); ?>");
+    })
+  </script>
+  <?php
+  header('Location: contact.php');
+}else{
+  ?>
+<?php
+
+}
+
+?>
 
 </html>

@@ -21,7 +21,7 @@ require("connect.php");
 		$_SESSION['name'] = $name;
 		$jsonData = json_encode($arr);
 		echo $jsonData;
-		//header('Location: ../contact.php');
+		header('Location: ../contact.php');
 		exit;
 	}else{
 		$on=false;

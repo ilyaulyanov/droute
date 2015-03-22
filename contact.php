@@ -2,6 +2,24 @@
 session_start();
 require_once('model/index.php');
 ?>
+<?php
+if(isset($_SESSION['name'])){
+  ?>
+  <script>
+    $(document).ready(function(){
+      $(".log-text").html('<?php echo $_SESSION["name"]." Logout" ?>');
+      $(".log-text").attr("href", "<?php session_destroy(); ?>");
+    })
+  </script>
+  <?php
+
+}else{
+  ?>
+<?php
+
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -147,22 +165,5 @@ require_once('model/index.php');
   <script src="bower_components/materialize/dist/js/init.js"></script>
   <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
 </body>
-<?php
-if(isset($_SESSION['name'])){
-  ?>
-  <script>
-    $(document).ready(function(){
-      $(".log-text").html('<?php echo $_SESSION["name"]." Logout" ?>');
-      $(".log-text").attr("href", "<?php session_destroy(); ?>");
-    })
-  </script>
-  <?php
 
-}else{
-  ?>
-<?php
-
-}
-
-?>
 </html>

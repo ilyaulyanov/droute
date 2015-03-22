@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 require("connect.php");
 	$email =$_POST["email"];
 	$pass =$_POST["pass"];

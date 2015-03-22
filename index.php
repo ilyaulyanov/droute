@@ -1,12 +1,13 @@
 <?php
-session_start();
-
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 require_once('model/index.php');
 
 $dr = new droute();
 
 $picks = $dr->get_all_staff_picks();
-
+$_SESSION['test'] = 'yay';
 //print_r($picks);
 
 

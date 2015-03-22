@@ -24,9 +24,11 @@ require_once('model/index.php');
          <li><a href="features.php">Features</a></li>
          <li><a href="explore.php">Explore</a></li>
          <li><a href="#">Contact</a></li>
-          <li class="logged"><a class="log-text" href="login.php">Login</a></li>        </ul>
+          <li class="logged"><a class="log-text" href="login.php">Login</a></li>
+          </ul>
         
         <ul id="nav-mobile" class="side-nav">
+          <li class="logged"><a class="log-text" href="login.php">Login</a></li>
           <li><a href="index.php">Home</a></li>
           <li><a href="features.php">Feature</a></li>
           <li><a href="explore.php">Explore</a></li>

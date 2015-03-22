@@ -35,9 +35,11 @@ $picks = $dr->get_all_staff_picks();
          <li><a href="features">Features</a></li>
          <li><a href="#">Explore</a></li>
          <li><a href="contact">Contact</a></li>
+         <li class="logged"><a class="log-text" href="login.php">Login</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
+          <li class="logged"><a class="log-text" href="login.php">Login</a></li>
           <li><a href="index.php">Home</a></li>
           <li><a href="features.php">Feature</a></li>
           <li><a href="explore.php">Explore</a></li>

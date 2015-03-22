@@ -1,4 +1,11 @@
 <?php
+<<<<<<< HEAD
+=======
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+echo $_SESSION['test'];
+>>>>>>> 6354fc33707c60f9c9ddbf002d7383c6248736e1
 ?>
 
 <!DOCTYPE html>
@@ -16,16 +23,21 @@
 <body>
  <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="/droute" class="brand-logo">Droute</a>
-        <ul class="right">
-         <li><a href="/droute">Home</a></li> 
-         <li><a href="features" class="active">Features</a></li>
+      <div class="nav-wrapper"><a id="logo-container" href="/droute" class="brand-logo hide-on-med-and-down">Droute</a>
+        <ul class="right hide-on-small-only">
+         <li><a href="index">Home</a></li> 
+         <li><a href="#" class="active">Features</a></li>
          <li><a href="explore">Explore</a></li>
          <li><a href="contact">Contact</a></li>
+         <li class="logged"><a class="log-text" href="login.php">Login</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Navbar Link</a></li>
+          <li class="logged"><a class="log-text" href="login.php">Login</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="features.php">Feature</a></li>
+          <li><a href="explore.php">Explore</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </div>
@@ -197,6 +209,40 @@
         </div>
     </div>
   </div>
+
+  <footer class="page-footer dark-primary-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Careers</h5>
+          <ul>
+            <li><a class="white-text" href="#!">iOS Developer</a></li>
+            <li><a class="white-text" href="#!">Android Developer</a></li>
+            <li><a class="white-text" href="#!">Marketing Intern</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Gordon Lee</a></li>
+            <li><a class="white-text" href="#!">Ilya Ulyanov</a></li>
+            <li><a class="white-text" href="#!">Jeff FitzGerald</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Keelo Digital</a>
+      </div>
+    </div>
+  </footer>
 
 
 

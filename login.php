@@ -4,25 +4,6 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 require_once('model/index.php');
 ?>
-<?php
-if(isset($_SESSION['name'])){
-  ?>
-  <script>
-    $(document).ready(function(){
-      $(".log-text").html('<?php echo $_SESSION["name"]." Logout" ?>');
-      $(".log-text").attr("href", "<?php session_destroy(); ?>");
-    })
-  </script>
-  <?php
-
-}else{
-  ?>
-<?php
-
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,9 +24,9 @@ if(isset($_SESSION['name'])){
          <li><a href="index.php">Home</a></li> 
          <li><a href="features.php">Features</a></li>
          <li><a href="explore.php">Explore</a></li>
-         <li><a href="#">Contact</a></li>
-          <li class="logged"><a class="log-text" href="login.php">Login</a></li>
-          </ul>
+         <li><a href="contact.php">Contact</a></li>
+         <li class="logged"><a class="log-text" href="login.php">Login</a></li>
+        </ul>
         
         <ul id="nav-mobile" class="side-nav">
           <li class="logged"><a class="log-text" href="login.php">Login</a></li>
@@ -59,70 +40,45 @@ if(isset($_SESSION['name'])){
       </div>
     </div>
   </nav> 
-
-
-  <div class="header-about hide-on-small-only">
-  </div>
-
+  <div class='pad3'?
   <!-- content -->
-  <div class="container">
+  <div class='container'>
     <div class="row">
-      <div class="col s12  ">
-        <ul class="tabs">
-          <li class="tab col s6"><a class="active" href="#about-us">About Droute</a></li>
-          <li class="tab col s6"><a href="#jobs">Jobs</a></li>
-        </ul>
+      <div class='col s8'>
+        <div class="row">
+          <form>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <button id='log'class="btn waves-effect waves-light dark-primary-bg" type="submit" name="action">Submit
+              <i class="mdi-content-send right"></i>
+            </button>
+          </form>
+        </div>
       </div>
-      <div id="about-us" class="col s12">
-        <div class='row valign-wrapper'>
-          <h4 class='center-align about-lead'>
-            Droute is the best place to share Drone taken videos and photos with friends, co-workers, classmates, and complete strangers. We are amazed how the commuinty has grown, lets do great things together.
-          </h4>
-        </div>
-        <div class="divider"></div>
-        <div class='row valign-wrapper left-align pad'>
-          <div class='col s6'>
-           <h5>With the collaborative features of Droute. It has never been easier for individuals and teams to survey an area and explore. Make an account with us and start collaborating</h5>
-          </div>
-          <div class='col s6'>
-          <h5>Founded by Ilya Ulyanov, Jeff FitzGerald, Gordon Lee to grow the drone community. The drone community is quickly becoming one of the fastest growing communities</h5>
-          </div>
-        </div>
-      </div>
-      <div id="jobs" class="col s12">
-        <div class='row valign-wrapper'>
-          <h4 class='center-align about-lead'>Come help us make collaboration even better. At Droute we build the tools that make collaborating and flying easier. We've built a company we truly love working for, and we think you will too. Here's why.</h4>
-        </div>
-        <div class="divider"></div>
-        <div class='row valign-wrapper left-align'>
-          <div class='col s8'>
-           <div row>
-             <div class='col s12'>
-              <h3>A Remote and Flexible Workplace</h3>
-              <h5>We encourage employees to build amazing things with a high level of autonomy and self-direction. Work/life balance is important to us, which is why we offer flexible work schedules and unlimited PTO. We believe that if a job allows for it, people should work wherever they're happiest.</h5>
-             </div>
-           </div>
-           <div row>
-             <div class='col s12'>
-              <h3>Our office</h3>
-              <h5>Our office is base in downtown Vancouver. We have unique spaces like a Bat Cave and a think tank to rejuvenate your creativity. We also have a bike room where you can store your bike.</h5>
-             </div>
-           </div>
-          </div>
-          <div class='col s4'>
-            <div class="card-panel dark-primary-bg">
-              <span class="white-text">
-                <h4>Open Positions</h4>
-                Currently we do not have any openings.
-              </span>
+      <div class="pad2">
+        <div class="col s4">
+          <div class="card-panel dark-primary-bg  ">
+            <div class="center">
+              <h4 class='white-text'>Don't have an account?</h4>
+              <a class="waves-effect waves-light blue btn">Register</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
+  </div>
+  
 
   <footer class="page-footer dark-primary-bg">
     <div class="container">
@@ -159,13 +115,51 @@ if(isset($_SESSION['name'])){
   </footer>
 
 
-
+  
 
 
     <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="bower_components/materialize/dist/js/init.js"></script>
   <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    var arr=[];
+    $('#log').click(function(){
+      $.post("model/login.php", {
+          email:$("#email").val(),
+          pass:$("#password").val(),
+      },
+      function(resp){
+          //console.log(resp);
+          resp = $.parseJSON(resp);
+          arr['name']=resp.name;
+          arr['log']=resp.log;
+          
+      })
+    })
+   
+  }) 
+  </script>
 </body>
+<?php
+
+if(isset($_SESSION['name'])){
+  ?>
+  <script>
+    $(document).ready(function(){
+      $(".log-text").html('<?php echo $_SESSION["name"]." Logout" ?>');
+      $(".log-text").attr("href", "<?php session_destroy(); ?>");
+    })
+  </script>
+  <?php
+  header('Location: contact.php');
+}else{
+  ?>
+<?php
+
+}
+
+?>
 
 </html>

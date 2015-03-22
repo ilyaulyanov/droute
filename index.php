@@ -1,9 +1,16 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 require_once('model/index.php');
 
 $dr = new droute();
 
 $picks = $dr->get_all_staff_picks();
+<<<<<<< HEAD
+=======
+$_SESSION['test'] = 'yay';
+>>>>>>> 6354fc33707c60f9c9ddbf002d7383c6248736e1
 //print_r($picks);
 
 
@@ -33,16 +40,21 @@ if(!isset($_SESSION['country'])){
 <body>
   <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper primary-text"><a id="logo-container" href="/droute" class="brand-logo">Droute</a>
-        <ul class="right">
-         <li><a href="/droute">Home</a></li> 
+      <div class="nav-wrapper primary-text"><a id="logo-container" href="/droute" class="brand-logo hide-on-med-and-down">Droute</a>
+        <ul class="right hide-on-small-only">
+         <li><a href="#">Home</a></li> 
          <li><a href="features">Features</a></li>
          <li><a href="explore">Explore</a></li>
          <li><a href="contact">Contact</a></li>
+         <li class="logged"><a class="log-text" href="login.php">Login</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Navbar Link</a></li>
+          <li class="logged"><a class="log-text" href="login.php">Login</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="features.php">Feature</a></li>
+          <li><a href="explore.php">Explore</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </div>
@@ -53,11 +65,11 @@ if(!isset($_SESSION['country'])){
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center primary-bg-text">Company Objective</h1>
+        <h1 class="header center primary-bg-text">Droute</h1>
 
 
         <div class="row center">
-          <h5 class="header col s12 light">Drone route and media storage in the cloud</h5>
+          <h5 class="header col s12 light">Our goal is to build an online community of drone enthusiasts while providing secure drone route and media storage in the cloud.</h5>
         </div>
         <div class="row center">
           <p class="row center"></p>
@@ -123,7 +135,7 @@ if(!isset($_SESSION['country'])){
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send accent"></i></h3>
-          <h4 class="primary-text" >Compatable Drones</h4>
+          <h4 class="primary-text" >Compatible Drones</h4>
           <div class="row">
             <div class="col l6 m6 s12">
               <div class="card">
@@ -132,8 +144,7 @@ if(!isset($_SESSION['country'])){
                   <span class="card-title">Parrot Drone</span>
                 </div>
                 <div class="card-content primary-bg">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                  <p>With a single touch to your screen, you can control your AR.Drone 2.0 to take-off, land, hover and flip!</p>
                 </div>
                 <div class="card-action dark-primary-bg">
                   <a class=" white-text" href="#">Purchase</a><i class="small mdi-action-add-shopping-cart"></i>
@@ -147,8 +158,7 @@ if(!isset($_SESSION['country'])){
                   <span class="card-title">DJI Phantom 2</span>
                 </div>
                 <div class="card-content primary-bg">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                  <p>The DJI Phantom 2 is a robust and versatile drone for recording footage and navigating your routes.</p>
                 </div>
                 <div class="card-action dark-primary-bg">
                   <a class=" white-text" href="#">Purchase</a><i class="small mdi-action-add-shopping-cart"></i>

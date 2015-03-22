@@ -9,6 +9,8 @@
 /*
 	BASE
 */
+
+
 h1,h2,h3,h4,h5,h6{
 	font-family:'Roboto Slab', 'Roboto', sans-serif;
 }
@@ -47,6 +49,11 @@ div.no-margin-btm{margin-bottom:0;}
 	THEME
 
 */
+
+.img-tint {
+
+	 background:rgba(0,0,0,.5);
+}
 
 .dark-primary-bg{
 	background:#0288D1;
@@ -108,3 +115,34 @@ div.no-margin-btm{margin-bottom:0;}
 .media-item.h2 { height: 200px; }
 .media-item.h3 { height: 300px; }
 .media-item.h4 { height: 400px; }
+
+/*
+Contact page *Gordon
+*/
+.header-about{
+	height:300px;
+	background-image: url('https://farm8.staticflickr.com/7364/13404952374_30ea7560ca_h.jpg');
+	background-size: cover;
+	background-position: 50%; 
+}
+.about-lead{
+	padding-top: 2%;
+  	padding-left: 10%;
+ 	padding-right: 10%;
+	margin-bottom: 40px;
+}
+ .pad{
+ 	padding-top: 2%;
+ }
+
+ .log{
+ 	padding-top: 0px;
+ }
+ .pad2{
+ 	padding-top: 4%;
+ }
+
+ .pad3{
+ 	padding-top: 9%;
+ 	padding-bottom: 9%;
+ }

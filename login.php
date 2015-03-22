@@ -1,8 +1,19 @@
 <?php
+$login ="Login";
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
+
 }
 require_once('model/index.php');
+
+if(isset($_SESSION['name'])){
+  $login=$_SESSION['name']." Logout";
+  $_SESSION['on']=$login;
+  echo"work";
+  
+}else{
+   $_SESSION['on'] ="no work";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +36,7 @@ require_once('model/index.php');
          <li><a href="features.php">Features</a></li>
          <li><a href="explore.php">Explore</a></li>
          <li><a href="contact.php">Contact</a></li>
-         <li class="logged"><a class="log-text" href="login.php">Login</a></li>
+         <li class="logged"><a class="log-text" href="login.php"><?php echo $login; ?></a></li>
         </ul>
         
         <ul id="nav-mobile" class="side-nav">
@@ -144,21 +155,6 @@ require_once('model/index.php');
 </body>
 <?php
 
-if(isset($_SESSION['name'])){
-  ?>
-  <script>
-    $(document).ready(function(){
-      $(".log-text").html('<?php echo $_SESSION["name"]." Logout" ?>');
-      $(".log-text").attr("href", "<?php session_destroy(); ?>");
-    })
-  </script>
-  <?php
-  header('Location: contact.php');
-}else{
-  ?>
-<?php
-
-}
 
 ?>
 

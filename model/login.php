@@ -29,5 +29,6 @@ require("connect.php");
 		$on=false;
 		$arr['log']=false;
 	}
+	mysqli_close($con);
 	
 ?>

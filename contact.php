@@ -2,6 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+ echo $_SESSION['on'];
 require_once('model/index.php');
 ?>
 <?php

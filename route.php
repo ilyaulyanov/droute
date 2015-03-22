@@ -24,9 +24,9 @@ $info = $dr->get_route_media($_GET['route']);
 <body>
  <nav class="dark-primary-bg" role="navigation">
     <div class="container">
-      <div class="nav-wrapper"><a id="logo-container" href="index" class="brand-logo white-text">Droute</a>
+      <div class="nav-wrapper"><a id="logo-container" href="/droute" class="brand-logo white-text">Droute</a>
         <ul class="right white-text">
-         <li><a href="index">Home</a></li> 
+         <li><a href="/droute">Home</a></li> 
          <li><a href="features">Features</a></li>
          <li><a href="explore">Explore</a></li>
          <li><a href="contact">Contact</a></li>

@@ -4,7 +4,6 @@ require_once('model/index.php');
 $dr = new droute();
 
 $picks = $dr->get_all_staff_picks();
-
 //print_r($picks);
 
 

@@ -9,6 +9,8 @@
 /*
 	BASE
 */
+
+
 h1,h2,h3,h4,h5,h6{
 	font-family:'Roboto Slab', 'Roboto', sans-serif;
 }
@@ -135,4 +137,12 @@ Contact page *Gordon
 
  .log{
  	padding-top: 0px;
+ }
+ .pad2{
+ 	padding-top: 4%;
+ }
+
+ .pad3{
+ 	padding-top: 9%;
+ 	padding-bottom: 9%;
  }

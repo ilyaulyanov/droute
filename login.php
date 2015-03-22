@@ -37,7 +37,7 @@ require_once('model/index.php');
       </div>
     </div>
   </nav> 
-
+  <div class='pad3'?
   <!-- content -->
   <div class='container'>
     <div class="row">
@@ -62,7 +62,18 @@ require_once('model/index.php');
           </form>
         </div>
       </div>
+      <div class="pad2">
+        <div class="col s4">
+          <div class="card-panel dark-primary-bg  ">
+            <div class="center">
+              <h4 class='white-text'>Don't have an account?</h4>
+              <a class="waves-effect waves-light blue btn">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
   </div>
   
 
